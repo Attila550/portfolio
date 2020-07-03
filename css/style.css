@@ -1,0 +1,81 @@
+/* ------------------ Fonts ------------------ */
+@font-face {
+      font-family: 'axiforma-light';
+      src: url(../assets/font/Axiforma-Light.ttf);
+}
+@font-face {
+      font-family: 'axiforma-medium';
+      src: url(../assets/font/Axiforma-Medium.ttf);
+}
+@font-face {
+      font-family: 'axiforma-regular';
+      src: url(../assets/font/Axiforma-Regular.ttf);
+}
+@font-face {
+      font-family: 'axiforma-semibold';
+      src: url(../assets/font/Axiforma-SemiBold.ttf);
+}
+@font-face {
+      font-family: 'axiforma-bold';
+      src: url(../assets/font/Axiforma-Bold.ttf);
+}
+/* ---------x-------- Fonts ---------x--------- */
+
+
+/* ------------------ Global ------------------ */
+* {
+      font-family: 'axiforma-regular', 'Helvetica', sans-serif;
+}
+
+html, body {
+      margin: 0%;
+      box-sizing: border-box;
+      overflow-x: hidden;
+}
+/* ---------x-------- Global ---------x--------- */
+
+
+/* ------------------ Utilities ------------------ */
+.bold{
+      font-family: 'axiforma-bold', 'Helvetica', sans-serif;
+}
+/* ---------x-------- Utilities ---------x--------- */
+
+
+/* ------------------ Nav ------------------ */
+
+body > nav.navbar { /* selects all <nav> elements where the parent is a <body> element */
+      background-color: #fff;
+      padding: 1rem 1rem;
+}
+
+body > nav#nav-bar{
+      max-width: 1080px;
+}
+
+nav#nav-bar a {
+      padding: .25rem .75rem;
+}
+      /* ------------------ Hamburger ------------------ */ 
+
+      nav#nav-bar button {
+            border: none;
+            padding: .25rem .75rem;
+      }
+
+      nav#nav-bar button div{
+            width: 25px;
+            height: 2px;
+            background-color: black;
+            margin-bottom: 5px;
+            border-radius: 10px;
+      }
+
+      nav#nav-bar button div:nth-child(3){
+            width: 17px;
+            margin-bottom: 0;
+      }
+
+      /* ---------x-------- Hamburger ---------x--------- */
+
+/* ---------x-------- Nav ---------x--------- */
