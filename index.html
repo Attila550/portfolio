@@ -7,9 +7,9 @@
       <!-- Bootstrap -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
       <!-- Font Awesome -->
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-      <!-- Custom Hamburgers -->
-      <link href="dist/hamburgers.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha512-xA6Hp6oezhjd6LiLZynuukm80f8BoZ3OpcEYaqKoCV3HKQDrYjDE1Gu8ocxgxoXmwmSzM4iqPvCsOkQNiu41GA==" crossorigin="anonymous" />
+      <!-- Custom Hamburgers by: https://jonsuh.com/hamburgers/ -->
+      <link href="./css/hamburgers.css" rel="stylesheet">
       <!-- Custom style -->
       <link rel="stylesheet" href="./css/style.css">
 
@@ -18,15 +18,15 @@
 
       <!---------------------- Navigation ----------------------->
 
-      <nav class="navbar navbar-expand-lg navbar-light m-auto" id="nav-bar">
+      <nav class="navbar navbar-expand-lg navbar-light m-auto wrapper" id="nav-bar">
             <!-- Logo -->
             <a class="navbar-brand" href="#"><span class="bold">andres</span>vidoza</a>
 
             <!-- Hamburger Menu -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                  <div></div>
-                  <div></div>
-                  <div></div>
+            <button class="navbar-toggler hamburger hamburger--spin-r" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                  </span>
             </button>
             
             <!-- Navbar & Collapsable If Mobile -->
@@ -41,7 +41,50 @@
             </div>
       </nav>
 
-      <!---------------------- Navigation ---------------x------->
+      <!----------x----------- Navigation ---------------x------->
+
+      <!---------------------- Main Site Section ----------------------->
+      <main class="wrapper m-auto">
+
+            <!---------------------- Header ----------------------->
+            <section class="site-header">
+                  <!-- Card -->
+                  <div class="profile-card mx-auto">
+                        <img src="./assets/images/pp1.JPG" alt="">
+                        <h1 class="bold">Hi. I'm Andres!</h1>
+                        <p>I am a content creator, frontend developer and python enthusiast.</p>
+                        <div class="btn-section">
+                              <a href="#" class="bold">hire me</a>
+                              <a href="#" class="bold">get cv</a>
+                        </div>
+                  </div>
+                  <!--x Card x-->
+
+                  <!-- Socials -->
+                  <div class="socials">
+                        <a href="#"><i class="fab fa-instagram-square"></i></a>
+                        <a href="#"><i class="fab fa-youtube-square"></i></a>
+                        <a href="#"><i class="fab fa-github-square"></i></a>
+                  </div>
+                  <!--x Socials x-->
+
+                  <!-- Email -->
+                  <a href="mailto:andresvidozacontact@gmail.com" class="email-btn"><i class="far fa-paper-plane"></i></a>
+                  <!--x Email x-->
+
+                  <!-- Down -->
+                  <i class="fas fa-chevron-down chevron-header"></i>
+                  <!-- Down -->
+            </section>
+            <!-----------x---------- Header -----------x----------->
+
+      </main>
+      <!-----------x---------- Main Site Section -----------x----------->
+
+
+
+
+
       
 
 

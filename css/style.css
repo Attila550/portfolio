@@ -28,7 +28,8 @@
 }
 
 html, body {
-      margin: 0%;
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
       overflow-x: hidden;
 }
@@ -39,6 +40,11 @@ html, body {
 .bold{
       font-family: 'axiforma-bold', 'Helvetica', sans-serif;
 }
+
+.wrapper{
+      max-width: 1080px;  
+}
+
 /* ---------x-------- Utilities ---------x--------- */
 
 
@@ -49,33 +55,192 @@ body > nav.navbar { /* selects all <nav> elements where the parent is a <body> e
       padding: 1rem 1rem;
 }
 
-body > nav#nav-bar{
-      max-width: 1080px;
-}
-
 nav#nav-bar a {
       padding: .25rem .75rem;
 }
       /* ------------------ Hamburger ------------------ */ 
 
-      nav#nav-bar button {
-            border: none;
-            padding: .25rem .75rem;
+      #nav-bar > button{
+            outline: none;
       }
 
-      nav#nav-bar button div{
-            width: 25px;
-            height: 2px;
-            background-color: black;
-            margin-bottom: 5px;
-            border-radius: 10px;
+      /* changing container of divs */
+      #nav-bar > button > span{
+            width: 1.6rem;
+            height: 1.2rem;
       }
 
-      nav#nav-bar button div:nth-child(3){
-            width: 17px;
-            margin-bottom: 0;
+      /* changing divs */
+      #nav-bar > button > span > span.hamburger-inner, #nav-bar > button > span > span.hamburger-inner::before, #nav-bar > button > span > span.hamburger-inner::after {
+            width: 1.6rem;
+            height: 0.2rem;
+            border-radius: 14rem;
+      }
+
+      /* changing div space to top */
+      #nav-bar > button > span > span.hamburger-inner{
+            margin-top: 0;
+      }
+
+      .hamburger-inner::after {
+            bottom: -0.44rem;
+      }
+
+      .hamburger-inner::before {
+            top: -0.44rem;
       }
 
       /* ---------x-------- Hamburger ---------x--------- */
 
-/* ---------x-------- Nav ---------x--------- */
+/* ------------------ Main Site Section ------------------ */
+
+      /* ------------------ Header ------------------ */
+
+      .site-header{
+            height: 81vh;
+            position: relative;
+      }
+
+      /*-- Card --*/
+
+      .profile-card{
+            margin-top: 2.1875rem;
+            margin-bottom: 2.8125rem;
+            padding: 1.5625rem .625rem;
+            background-color: #fff;
+            width: 80%;
+            max-width: 37rem;
+            box-shadow: 0px 6px 52px -25px rgba(0,0,0,0.68);
+      }
+
+      .profile-card img {
+            display: block;
+            margin: 0 auto;
+            border-radius: 50%;
+            height: 7.8rem;
+      }
+
+      .profile-card h1 {
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 1.25rem;
+      }
+
+      .profile-card p {
+            text-align: center;
+            font-size: 0.75rem;
+            color: #A1A1A1;
+      }
+
+      .profile-card .btn-section{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+      }
+
+      .profile-card .btn-section a{
+            transition: 0.2s all ease-in-out;
+            text-decoration: none;
+      }
+
+      .profile-card .btn-section a:hover{
+            transform: scale(1.05);
+      }
+
+      .profile-card .btn-section a:nth-child(1){
+            margin-right: 1.2rem;
+            padding: 6px 20px 5px;
+            background-color: #000;
+            font-size: 0.625rem;
+            color: #fff;
+      }
+
+      .profile-card .btn-section a:nth-child(2){
+            padding: .375rem 1.25rem .3125rem;
+            background-color: #E6E6E6;
+            font-size: 0.625rem;
+            color: #676767;
+      }
+
+      /*--x Card x--*/
+
+      /*-- Socials --*/
+
+      .socials{
+            display: flex;
+            justify-content: center;
+            margin-top: 4.5rem;
+      }
+
+      .socials a {
+            display: block;
+            font-size: 2rem;
+            color: black;
+
+            transition: 0.2s all ease-in-out;
+      }
+
+      .socials a:hover {
+            transform: scale(1.05);
+      }
+
+      .socials a:nth-child(2), .socials a:nth-child(3) {
+            margin-left: 1rem;
+      }
+
+      /*--x Socials x--*/
+
+      /*-- Email --*/
+
+      .email-btn{
+            position: absolute;
+            right: 2rem;
+            bottom: 2rem;
+            background-color: #000;
+            color: #fff;
+            padding: .75rem .75rem;
+            border-radius: 50%;
+            font-size: 1rem;
+            line-height: 0;
+
+            transition: 0.2s all ease-in-out;
+      }
+
+      .email-btn:hover{
+            color: #fff;
+            transform: scale(1.05);
+      }
+
+      /*--x Email x--*/
+
+      /*-- Down --*/
+
+      .chevron-header{
+            position: absolute;
+            bottom: 1.5rem;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: #9A9A9A;
+            animation: MoveUpDown 2s ease-in-out infinite;
+      }
+
+      @keyframes MoveUpDown {
+            0%, 100% {
+              bottom: 15px;
+            }
+            50% {
+              bottom: 30px;
+            }
+      }
+
+      /*--x Down x--*/
+
+
+
+
+      /* ---------x-------- Header ---------x--------- */
+
+/* ---------x-------- Main Site Section ---------x--------- */
