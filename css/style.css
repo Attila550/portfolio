@@ -19,6 +19,11 @@
       font-family: 'axiforma-bold';
       src: url(../assets/font/Axiforma-Bold.ttf);
 }
+
+@font-face {
+      font-family: 'axiforma-extrabold';
+      src: url(../assets/font/Axiforma-ExtraBold.ttf);
+}
 /* ---------x-------- Fonts ---------x--------- */
 
 
@@ -41,6 +46,10 @@ hr{
 
 
 /* ------------------ Utilities ------------------ */
+.extraBold{
+      font-family: 'axiforma-extrabold', 'Helvetica', sans-serif;
+}
+
 .bold{
       font-family: 'axiforma-bold', 'Helvetica', sans-serif;
 }
@@ -51,6 +60,15 @@ hr{
 
 .wrapper{
       max-width: 1080px;  
+}
+
+.yt-link{
+      color: red;
+      text-decoration: underline;
+}
+
+.blog-link{
+      text-decoration: underline;
 }
 
 /* ---------x-------- Utilities ---------x--------- */
@@ -67,6 +85,14 @@ nav#nav-bar a {
       padding: .25rem .75rem;
 }
       /* ------------------ Hamburger ------------------ */ 
+
+      .hamburger.is-active:hover {
+            opacity: 1;
+      }
+
+      .hamburger:hover {
+            opacity: 1;
+      }
 
       #nav-bar > button{
             outline: none;
@@ -100,12 +126,16 @@ nav#nav-bar a {
 
       /* ---------x-------- Hamburger ---------x--------- */
 
+/* -----------------------------------------------------------------------------------------------------------------------
+/* --- INDEX.HTML --------------------------------------------------------------------------------------------------------
+/* -----------------------------------------------------------------------------------------------------------------------
+
 /* ------------------ Main Site Section ------------------ */
 
       /* ------------------ Header ------------------ */
 
       .site-header{
-            height: 81vh;
+            height: 77vh;
             position: relative;
       }
 
@@ -131,7 +161,7 @@ nav#nav-bar a {
       .profile-card h1 {
             margin-top: 1rem;
             text-align: center;
-            font-size: 1.25rem;
+            font-size: 1.5rem;
       }
 
       .profile-card p {
@@ -158,16 +188,16 @@ nav#nav-bar a {
 
       .profile-card .btn-section a:nth-child(1){
             margin-right: 1.2rem;
-            padding: 6px 20px 5px;
+            padding: 0.6rem 1.25rem;
             background-color: #000;
-            font-size: 0.625rem;
+            font-size: 0.75rem;
             color: #fff;
       }
 
       .profile-card .btn-section a:nth-child(2){
-            padding: .375rem 1.25rem .3125rem;
+            padding: 0.6rem 2.1rem;
             background-color: #E6E6E6;
-            font-size: 0.625rem;
+            font-size: 0.75rem;
             color: #676767;
       }
 
@@ -204,7 +234,7 @@ nav#nav-bar a {
       .email-btn{
             position: absolute;
             right: 2rem;
-            bottom: 2rem;
+            bottom: 0rem;
             background-color: #000;
             color: #fff;
             padding: .75rem .75rem;
@@ -249,77 +279,20 @@ nav#nav-bar a {
 
       /* ---------x-------- Header ---------x--------- */
 
-      /* ------------------ Instagram ------------------ */
+/* ---------x-------- Main Site Section ---------x--------- */
 
-      main .instagram {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-      }
-
-      main .instagram-post{
-            margin-top: 2rem;
-            width: 15rem;
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            box-shadow: 0px 6px 52px -25px rgba(0,0,0,0.68);
-      }
-
-      main .instagram-post img {
-            width: inherit; /* inherit from post width */
-      }
-
-      main .instagram-content-top {
-            margin-top: 1.4rem;
-            margin-bottom: 1rem;
-            display: flex;
-            justify-content: space-around;
-      }
-
-      main .instagram-content-top .likes{
-            display: flex;
-            justify-content: center;
-      }
-
-      main .instagram-content-top .comments{
-            display: flex;
-            justify-content: center;
-      }
-
-      main .instagram-content-top p {
-            margin-left: 0.5rem;
-      }
-
-      main .instagram-content-top i {
-            font-size: 1.5rem;
-      }
-
-      main .instagram-content-bottom{
-            font-size: 0.60rem;  
-            padding: 0 2.5rem 1.5rem;
-      }    
-      
-      main .instagram-content-bottom .btn-instagram {
-            margin-top: 1rem;
-            background-color: #000;
-            outline: 0;
-            border: none;
-            color: #fff;
-            font-size: 1rem;
-            padding: 0.4rem .9rem
-      }
-
-      /* ---------x-------- Instagram ---------x--------- */
+/* -----------------------------------------------------------------------------------------------------------------------
+/* --- BLOG.HTML --------------------------------------------------------------------------------------------------------
+/* -----------------------------------------------------------------------------------------------------------------------
 
       /* ------------------ Blog ------------------ */
 
       main .site-content{
-            margin-top: 5rem;
+            margin-top: 1rem;
             display: grid;
-            grid-template-columns: 70% 30%;
+            /* grid-template-columns: 70% 30%; */
+            /* mobile */
+            grid-template-columns: 100%;
       }
 
       main .post-content {
@@ -334,11 +307,15 @@ nav#nav-bar a {
       main .site-content .post-content > .post-image .post-info{
             background-color: #000;
             color: #fff;
-            padding: 1rem;
+            padding: 0.75rem;
             position: absolute;
             bottom: 0;
             left: 2rem;
             bottom: 1rem;
+            font-size: 0.75rem;
+            /* mobile */
+            display: none;
+
       }
 
       main .site-content .post-content > .post-image > div {
@@ -359,13 +336,27 @@ nav#nav-bar a {
       }
 
       main .post-content .post-title a {
-            font-size: 2rem;
+            /* font-size: 2rem; */
+            /* mobile */
+            font-size: 1.5rem;
             color: #000;
             text-transform: uppercase;
       }
 
       main .site-content .post-content .post-info{
             display: flex;
+      }
+
+      main .site-content .post-content .post-tags{
+            margin: 0 2rem;
+            padding: 0.25rem 1rem 0.1rem;
+            font-size: 0.75rem;
+            background-color: #9D9D9D;
+            display: inline-block;
+      }
+
+      main .site-content .post-content .post-tags a{
+            color: #fff;
       }
 
       main .site-content .post-content .post-title p {
@@ -380,8 +371,8 @@ nav#nav-bar a {
             outline: 0;
             border: none;
             color: #fff;
-            font-size: 1rem;
-            padding: 0.8rem 1.5rem ;
+            font-size: 0.75rem;
+            padding: 0.6rem 1.25rem ;
             text-transform: lowercase;
       }
 
@@ -398,12 +389,12 @@ nav#nav-bar a {
             padding: .6rem .9rem;
             margin: 0 0.3rem;
             color: #000;
+            font-size: 0.75rem;
       }
 
       main .site-content .pagination .pages{
             background-color: #000;
             color: white;
-
       }
 
       /*--x Pagination x--*/
@@ -415,6 +406,13 @@ nav#nav-bar a {
       /*-- Category --*/
       main .site-content > .sidebar{
             margin-top: 1rem;
+            /* mobile */
+            padding: 0 2rem;
+      }
+
+      main .site-content > .sidebar .category h2{
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
       }
 
       main .site-content > .sidebar .category-list{
@@ -426,20 +424,29 @@ nav#nav-bar a {
             color: white;
             padding: 0.4rem 1rem;
             margin: 0.8rem 0;
-            width: 70%;
+            /* width: 70%; */
+            /* mobile */
+            width: 80%;
             display: flex;
             justify-content: space-between;
+            font-size: 0.75rem;
       }
 
       main .site-content > .sidebar .category-list .list-items a{
             color: #fff;
+            font-size: 0.75rem;
       }
       /*--x Category x--*/
 
       /*-- Popular Post --*/
 
+      main .site-content .sidebar .popular-post{
+            /* mobile */
+            display: none;
+      }
+
       main .site-content .sidebar .popular-post .post-content{
-            padding: 1rem 0;
+            padding: 1rem 0 0;
       }
 
       main .site-content .sidebar .popular-post .post-content .post-image{
@@ -451,15 +458,18 @@ nav#nav-bar a {
       }
 
       main .site-content .sidebar .popular-post h2 {
-            padding-top: 8rem;
+            margin: 0;
+            padding-top: 3rem;
       }
 
       main .site-content .sidebar .popular-post .post-info {
-            padding: 0.5rem;
+            padding: 0.4rem;
             background-color: #fff;
             color: black;
             bottom: 0rem;
             left: 0rem;
+            /* mobile */
+            display: none;
       }
 
       main .site-content .sidebar .popular-post .post-info span {
@@ -479,40 +489,45 @@ nav#nav-bar a {
 
       /*-- Newsletter --*/
 
+      main .site-content .sidebar .newsletter h2{
+            margin: 0;
+            font-size: 1.5rem;
+      }
+
       main .site-content .sidebar .newsletter{
             padding-top: 3rem;
       }
 
       main .site-content .sidebar .newsletter .form-element{
-            padding: 1rem 0;
+            padding: 2rem 0 0;
       }
 
       main .site-content .sidebar .newsletter .input-element{
-            width: 70%;
-            height: 3.5rem;
+            width: 60%;
+            height: 2.5rem;
             padding: 0.3rem 1rem 0.2rem;
             border: none;
             outline: none;
             box-shadow:0 0 30px rgba(0,0,0,0.18);
-
+            font-size: 0.75rem;
       }
 
       ::placeholder{
             text-transform: lowercase;
             color: #000;
-            font-size: 1.2rem;
+            font-size: 0.75rem;
       }
 
       main .site-content .sidebar .newsletter .btn-news{
             background-color: #000;
             color: #fff;
-            width: 70%;
-            height: 3.5rem;
+            width: 60%;
+            height: 2.5rem;
             padding: 0.3rem 1rem 0.2rem;
             border: none;
             outline: none;
-            font-size: 1.3rem;
-            margin-top: 1.8rem;
+            font-size: 0.75rem;
+            margin-top: 1rem;
       }
 
       main .site-content .sidebar .newsletter .btn-news i{
@@ -525,6 +540,10 @@ nav#nav-bar a {
 
 
       /*-- Popular Tags --*/
+      main .site-content .sidebar .popular-tags h2{
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+      }
 
       main .site-content .sidebar .popular-tags{
             padding-top: 4rem;
@@ -533,15 +552,15 @@ nav#nav-bar a {
       main .site-content .sidebar .popular-tags .tags{
             display: flex;
             flex-direction: column;
-            width: 80%;
+            width: 70%;
       }
 
       main .site-content .sidebar .popular-tags .tags .tag{
             background-color: #000;
             color: #fff;
-            padding: 0.75rem 1rem;
-            margin-bottom: 1rem;
-            
+            padding: 0.4rem 1rem;
+            margin: 0.4rem 0;
+            font-size: 0.75rem;
       }
 
       /*--x Popular Tags x--*/
@@ -557,18 +576,28 @@ footer{
       height: 100%;
       background-color: #000;
       color: #fff;
+      padding-top: 2rem;
 }
 
 footer .container{
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 10rem;
+      /* grid-template-columns: repeat(2, 1fr); */
+      /* column-gap: 10rem; */
+      /* mobile */
+      grid-template-columns: repeat(1, 1fr);
 }
 
 footer .container > div {
       flex-grow: 1;
       flex-basis: 0;
-      padding: 3rem 0.9rem 0rem;
+      /* padding: 3rem 0.9rem 0rem; */
+      /* mobile */
+      padding: 1rem 0.9rem
+
+}
+
+footer .container h2{
+      font-size: 1.5rem;
 }
 
 footer .container .about-us p{
@@ -579,7 +608,7 @@ footer .container .about-us p{
 
 footer .container .newsletter input[type="text"]{
      width: 7rem; 
-     font-size: 0.8rem;
+     font-size: 0.75rem;
      border: none;
      outline: none;
      padding: 0.5rem 0.9rem;
@@ -587,7 +616,7 @@ footer .container .newsletter input[type="text"]{
 }
 
 footer ::placeholder{
-      font-size: 0.8rem;
+      font-size: 0.75rem;
 }
 
 footer .container .newsletter .form-element span{
@@ -626,13 +655,17 @@ footer .follow > div i{
 footer .rights{
       display: flex;
       justify-content: center;
-      padding-bottom: 2rem;
-      padding-top: 3rem;
+      /* padding-bottom: 2rem;
+      padding-top: 3rem; */
+      /* mobile */
+      padding: 1rem 1.4rem;
+      text-align: center;
 }
 
 footer .rights h4{
       color: #9D9D9D;
       font-size: 0.75rem;
+      line-height: 1.2rem;
 }
 
 footer .rights h4 a{
@@ -643,8 +676,675 @@ footer .rights h4 a{
 /* --x Rights x--*/
 
 
+/* ---------x-------- Footer ---------x--------- */
 
 
+/* ------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------------- Contact ------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------- */
+
+
+/* ------------------ Form ------------------- */
+
+main .contact-wrapper {
+      padding: 0 2rem;
+}
+
+main .contact-wrapper h2 {
+      font-size: 1.5rem;
+      text-align: center;
+}
+
+main .contact-wrapper p {
+      margin-top: 1.5rem;
+      font-size: 0.75rem;
+      text-align: center;
+      color: #9D9D9D;
+      margin-bottom: 0.25rem;
+}
+
+main .contact-wrapper input, main .contact-wrapper textarea{
+      outline: none;
+      border: none;
+      display: block;
+      box-shadow:0 0 30px rgba(0,0,0,0.18);
+      width: 100%;
+      margin: 1.2rem auto 0;
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+      max-width: 20rem;
+}
+
+main .contact-wrapper textarea{
+      height: 7rem;
+}
+
+
+main .contact-wrapper button{
+      display: block;
+      border: none;
+      background-color: #000;
+      color: #fff;
+      font-size: 0.75rem;
+      padding: 0.5rem 2rem;
+      margin: 1.2rem auto 0;
+}
+
+
+/* ---------x-------- Form ---------x--------- */
+
+
+
+/* ------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------------- About ------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------- */
+
+
+/* ------------------ About header ------------------- */
+
+main .about-header{
+    padding: 1.8rem 2rem 0;  
+    height: 81vh;
+}
+
+main .about-header .about-img{
+      margin: 0 auto;
+      width: 10rem;
+}
+
+main .about-header .about-img img {
+      width: 10rem;
+      border-radius: 50%;
+}
+
+main .about-header .about-info h2 {
+      font-size: 1.5rem;
+      text-align: center;
+      margin-top: 1.5rem;
+}
+
+main .about-header .about-info p {
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      text-align: center;
+      color: #9D9D9D;
+      margin-bottom: 0.25rem;
+}
+
+main .about-header .btn-download{
+      display: block;
+      border: none;
+      background-color: #000;
+      color: #fff;
+      font-size: 0.75rem;
+      padding: 0.5rem 2rem;
+      margin: 1.2rem auto 0; 
+}
+
+
+/*-- Services --*/
+
+main .services{
+      padding: 4rem 2rem 0;  
+}
+
+main .services .services-info h2{
+      font-size: 1.5rem;
+      text-align: center;
+}
+
+main .services .services-info p{
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      text-align: center;
+      color: #9D9D9D;
+      margin-bottom: 0.25rem;
+}
+
+main .services .services-card{
+      margin-top: 2rem;
+      box-shadow: 0px 6px 52px -25px rgba(0,0,0,0.68);
+      padding: 1.5rem;
+}
+
+main .services .services-card .service-icon i{
+      font-size: 3rem;
+      margin: 0 auto;
+}
+
+main .services .services-card .service-icon{
+      padding-top: 3rem;
+      text-align: center; 
+}
+
+
+main .services .services-card .service-content h3{
+      font-size: 1.25rem;
+      text-align: center;
+      margin-top: 1.5rem;  
+}
+
+main .services .services-card .service-content p{
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      text-align: center;
+      color: #9D9D9D;
+      margin-bottom: 0.25rem;
+}
+
+
+
+/*--x Services x--*/
+
+/* ---------x-------- About header ---------x--------- */
+
+
+
+/* -----------------------------------------------------------------------------------------------------------------------
+/* --- RESPONSIVE --------------------------------------------------------------------------------------------------------
+/* -----------------------------------------------------------------------------------------------------------------------
+
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/* --- HEADER ------------------------------------------------------------------------------------------------------------ */
+/* ----------------------------------------------------------------------------------------------------------------------- */
+
+@media only screen and (min-width: 750px){
+      nav#nav-bar a {
+            
+      }
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/* --- FOOTER ------------------------------------------------------------------------------------------------------------ */
+/* ----------------------------------------------------------------------------------------------------------------------- */
+
+@media only screen and (min-width: 750px){
+/* ------------------ Footer ------------------- */
+
+      footer .container h2{
+            font-size: 2rem;
+      }
+
+      footer .container .about-us p{
+            font-size: 1rem;
+      }
+
+      footer .container .newsletter input[type="text"]{
+            font-size: 1rem;
+      }
+
+      footer ::placeholder{
+            font-size: 1rem;
+      }
+
+      footer .container .newsletter p{
+            font-size: 1rem;
+      }
+
+      footer .follow p{
+            font-size: 1rem;
+      }
+
+      footer .follow > div i{
+            margin-right: 0.75rem;
+            font-size: 2rem;
+      }
+
+      /* -- Rights --*/
+
+      footer .rights h4{
+            font-size: 1rem;
+      }
+
+      /* --x Rights x--*/
 
 
 /* ---------x-------- Footer ---------x--------- */
+}
+
+
+/* ----------------------------------------- TABLET ------------------------------------------------*/
+
+
+/* -----------------------------------------------------------------------------------------------------------------------
+/* --- INDEX.HTML --------------------------------------------------------------------------------------------------------
+/* -----------------------------------------------------------------------------------------------------------------------
+
+/* Viewport is more than 750px */
+@media only screen and (min-width: 750px){
+      /* ------------------ Header ------------------ */
+
+            .site-header{
+                  height: 76vh;
+            }
+      
+            /*-- Card --*/
+      
+            .profile-card{
+                  margin-top: 8rem;
+                  padding: 3rem 2rem 2rem;
+                  max-width: 25rem;
+            }
+      
+            .profile-card img {
+                  height: 12rem;
+            }
+      
+            .profile-card h1 {
+                  margin-top: 2rem;
+                  font-size: 2rem;
+            }
+      
+            .profile-card p {
+                  font-size: 1rem;
+            }
+
+            .profile-card .btn-section a:nth-child(1){
+                  font-size: 1rem;
+            }
+      
+            .profile-card .btn-section a:nth-child(2){
+                  padding: 0.6rem 2.60rem;
+                  font-size: 1rem;
+            }
+      
+            /*--x Card x--*/
+      
+            /*-- Socials --*/
+      
+            .socials{
+                  position: absolute;
+                  bottom: -1rem;
+                  left: 2rem;
+                  justify-content: center;
+                  margin-top: 0;
+            }
+      
+            .socials a {
+                  font-size: 3rem;
+            }
+      
+      
+            /*--x Socials x--*/
+
+            /*-- EMaiil Button --*/
+
+            .email-btn{
+                  padding: 1.25rem 1.25rem;
+                  font-size: 1.5rem;
+            }
+
+            /*--x EMaiil Button x--*/
+
+      /* ----------x------- Header ----------x------- */
+      
+}
+
+/* -----------------------------------------------------------------------------------------------------------------------
+/* --- BLOG.HTML ---------------------------------------------------------------------------------------------------------
+/* -----------------------------------------------------------------------------------------------------------------------
+
+/* Viewport is more than 750px */
+@media only screen and (min-width: 750px){
+      main .site-content .post-content > .post-image .post-info{
+            display: block;
+      }
+
+      main .site-content .post-content .post-title p {
+            font-size: 1rem;
+      }
+
+      main .site-content .post-content .post-title a {
+            font-size: 2rem;
+      }
+
+      main .site-content .post-content .post-title .btn-post {
+            font-size: 1rem;
+      }
+
+      main .site-content .pagination .pages{
+            font-size: 1rem;
+      }
+
+      main .site-content .sidebar .category h2 {
+            font-size: 2rem;
+      }
+
+      main .site-content .sidebar .popular-post h2 {
+            font-size: 2rem;
+      }
+
+      main .site-content .sidebar .newsletter h2 {
+            font-size: 2rem;
+      }
+
+      main .site-content .sidebar .popular-tags h2 {
+            font-size: 2rem;
+      }
+
+      footer .container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 10rem;
+      }
+      
+      footer .container > div {
+            flex-grow: 1;
+            flex-basis: 0;
+            padding: 1.5rem 0.9rem 0rem;
+      
+      }
+
+      /* -- Rights --*/
+      footer .rights{
+            display: flex;
+            justify-content: center;
+            padding-bottom: 2rem;
+            padding-top: 3rem;
+      }
+
+
+      /*-- Aside bar --*/
+
+      /*-- Categories --*/
+      main .site-content > .sidebar .category-list .list-items {
+            font-size: 1rem;
+      }
+
+      main .site-content > .sidebar .category-list .list-items a{
+            font-size: 1rem;
+      }
+      /*--x Categories x--*/
+
+
+      /*-- Newsletter --*/
+
+      main .site-content .sidebar .newsletter .input-element{
+            font-size: 1rem;
+      }
+
+      ::placeholder{
+            font-size: 1rem;
+      }
+
+      main .site-content .sidebar .newsletter .btn-news{
+            font-size: 1rem;
+      }
+
+      /*--x Newsletter x--*/
+
+      /*-- Popular Tags --*/
+
+      main .site-content .sidebar .popular-tags .tags .tag{
+            font-size: 1rem;
+      }
+
+      /*--x Popular Tags x--*/
+
+      /*--x Aside bar x--*/
+}
+
+/* -----------------------------------------------------------------------------------------------------------------------
+/* --- ABOUT.HTML --------------------------------------------------------------------------------------------------------
+/* -----------------------------------------------------------------------------------------------------------------------
+
+/* Viewport is more than 750px */
+@media only screen and (min-width: 750px){
+/* ------------------ About header ------------------- */
+
+      main .about-header{
+            height: 86vh;
+            padding: 5rem 5rem 0;
+      }
+      
+      main .about-header .about-img{
+            width: 15rem;
+      }
+      
+      main .about-header .about-img img {
+            width: 15rem;
+      }
+      
+      main .about-header .about-info h2 {
+            font-size: 2rem;
+            margin-top: 2rem;
+      }
+      
+      main .about-header .about-info p {
+            margin-top: 1.75rem;
+            font-size: 1rem;
+            margin-bottom: 2rem;
+      }
+      
+      main .about-header .btn-download{
+            font-size: 1rem;
+      }
+
+
+      /*-- Services --*/
+
+      main .services{
+            padding: 6rem 5rem 2rem;  
+      }
+
+      main .services .services-info h2{
+            font-size: 2rem;
+      }
+
+      main .services .services-info p{
+            font-size: 1rem;
+      }
+
+      main .services .services-card{
+            margin: 3rem auto 0;
+            padding: 3rem 1.5rem;
+            max-width: 20rem;
+      }
+
+      main .services .services-card .service-icon i{
+            font-size: 3rem;
+            margin: 0 auto;
+      }
+
+      main .services .services-card .service-content h3{
+            font-size: 1.5rem;
+      }
+
+      main .services .services-card .service-content p{
+            margin-top: 1rem;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+      }
+
+
+
+      /*--x Services x--*/
+}
+
+/* -----------------------------------------------------------------------------------------------------------------------
+/* --- CONTACT.HTML ------------------------------------------------------------------------------------------------------
+/* -----------------------------------------------------------------------------------------------------------------------
+
+/* Viewport is more than 750px */
+@media only screen and (min-width: 750px){
+
+      /* ------------------ Form ------------------- */
+
+      main .contact-wrapper {
+            padding: 0 5rem;
+      }
+
+      main .contact-wrapper h2 {
+            font-size: 2rem;
+            margin-top: 2rem;
+      }
+
+      main .contact-wrapper p {
+            font-size: 1rem;
+      }
+
+      main .contact-wrapper input, main .contact-wrapper textarea{
+            margin: 1.5rem auto 0;
+            font-size: 1rem;
+      }
+
+      main .contact-wrapper textarea{
+            height: 7rem;
+      }
+
+
+      main .contact-wrapper button{
+            font-size: 1rem;
+      }
+
+
+      /* ---------x-------- Form ---------x--------- */
+      
+}
+
+
+
+/* ----------------------------------------- LAPTOP ------------------------------------------------*/
+
+
+/* -----------------------------------------------------------------------------------------------------------------------
+/* --- INDEX.HTML --------------------------------------------------------------------------------------------------------
+/* -----------------------------------------------------------------------------------------------------------------------
+
+
+/* Viewport is more than 1024px */
+@media only screen and (min-width: 1024px){
+      
+      /*-- Card --*/
+            
+      .profile-card{
+            margin-top: 12rem;
+      }
+}
+
+
+/* -----------------------------------------------------------------------------------------------------------------------
+/* --- BLOG.HTML ---------------------------------------------------------------------------------------------------------
+/* -----------------------------------------------------------------------------------------------------------------------
+
+/* Viewport is more than 1024px */
+@media only screen and (min-width: 1024px){
+      main .site-content .sidebar .popular-post{
+            display: block;
+      }
+
+      main .site-content .sidebar .popular-post .post-info {
+            display: block;
+      }
+
+      /*-- Category --*/
+      main .site-content > .sidebar{
+            margin-top: 1rem;
+      }
+
+      main .site-content > .sidebar .category-list .list-items {
+            width: 110%;
+      }
+
+      /* ------------------ Blog ------------------ */
+
+      main .site-content{
+            grid-template-columns: 70% 30%;
+      }
+
+      main .site-content .sidebar .newsletter .input-element{
+            width: 80%;
+      }
+
+      main .site-content .sidebar .newsletter .btn-news{
+            width: 80%;
+      }
+
+      main .site-content .sidebar .popular-tags .tags{
+            width: 90%;
+      }
+
+}
+
+
+/* -----------------------------------------------------------------------------------------------------------------------
+/* --- ABOUT.HTML --------------------------------------------------------------------------------------------------------
+/* -----------------------------------------------------------------------------------------------------------------------
+/* Viewport is more than 1024px */
+@media only screen and (min-width: 1024px){
+      /* ------------------ About header ------------------- */
+
+      main .about-header{
+            display: flex;
+            height: 25rem;
+      }
+      
+      main .about-header .about-img{
+            margin-left: 6rem;
+            order: 2;
+      }
+      
+      main .about-header .about-info h2 {
+            text-align: left;
+            font-size: 3rem;
+      }
+      
+      main .about-header .about-info p {
+            text-align: left;
+      }
+      
+      main .about-header .btn-download{
+            margin: 0;
+      }
+
+      .chevron-header{
+            display: none;
+      }
+      
+      /*-- Services --*/
+
+      main .services .cards{
+            display: flex;
+      }
+      
+      main .services .services-card{
+           width: 17rem;
+           padding: 2rem 1.5rem;
+      }
+      
+      /*--x Services x--*/
+      
+      /* ---------x-------- About header ---------x--------- */
+}
+
+
+
+/* -----------------------------------------------------------------------------------------------------------------------
+/* --- CONTACT.HTML --------------------------------------------------------------------------------------------------------
+/* -----------------------------------------------------------------------------------------------------------------------
+/* Viewport is more than 1024px */
+@media only screen and (min-width: 1024px){
+      /* ------------------ Form ------------------- */
+
+      main .contact-wrapper {
+            padding: 0 12rem;
+      }
+
+      main .contact-wrapper h2 {
+            margin-top: 4rem;
+      }
+
+      main .contact-wrapper p {
+            margin-top: 1.5rem;
+            margin-bottom: 2rem;
+      }
+
+      main .contact-wrapper input, main .contact-wrapper textarea{
+            max-width: 22rem;
+      }
+
+      main .contact-wrapper textarea{
+            height: 8rem;
+      }
+
+}

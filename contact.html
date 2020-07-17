@@ -12,7 +12,6 @@
       <link href="./css/hamburgers.css" rel="stylesheet">
       <!-- Custom style -->
       <link rel="stylesheet" href="./css/style.css">
-
 </head>
 <body>
 
@@ -46,35 +45,25 @@
       <!---------------------- Main Site Section ----------------------->
       <main class="wrapper m-auto">
 
-            <!---------------------- Header ----------------------->
-            <section class="site-header">
-                  <!-- Card -->
-                  <div class="profile-card mx-auto">
-                        <img src="./assets/images/pp1.JPG" alt="profile-picture">
-                        <h1 class="bold">Hi. I'm Andres!</h1>
-                        <p>I am a <a href="" class="yt-link extraBold">YouTuber</a>, <a href="" class="blog-link extraBold">Blogger</a> & 
-                              web developer.</p>
-                        <div class="btn-section">
-                              <a href="#" class="bold">about me</a>
-                              <a href="#" class="bold">blog</a>
-                        </div>
+            <!---------------------- Contact ----------------------->
+
+            <section class="contact-wrapper">
+                  <div class="contact-info">
+                        <h2 class="bold">Send me a message</h2>
+                        <p>Feel free to get In touch with me with anything related to development, productivity, content creation or you can just say hi. I will get back to you as soon as I can. </p>
                   </div>
-                  <!--x Card x-->
-
-                  <!-- Socials -->
-                  <div class="socials">
-                        <a href="#"><i class="fab fa-instagram-square"></i></a>
-                        <a href="#"><i class="fab fa-youtube-square"></i></a>
-                        <a href="#"><i class="fab fa-github-square"></i></a>
-                  </div>
-                  <!--x Socials x-->
-
-                  <!-- Email -->
-                  <a href="mailto:andresvidozacontact@gmail.com" class="email-btn"><i class="far fa-paper-plane"></i></a>
-                  <!--x Email x-->
-
+                  <form action="" class="contact-from">
+                        <input type="text" id="name" name="name" placeholder="name" class="bold">
+                        <input type="email" id="email" name="email" placeholder="email" class="bold">
+                        <input type="text" id="subject" name="subject" placeholder="subject" class="bold">
+                        <textarea id="message" name="message" placeholder="message" class="bold"></textarea>
+                        <br>
+                        <button type="submit" class="bold">send&nbsp;&nbsp;<i class="far fa-envelope"></i></button>
+                  </form>
             </section>
-            <!-----------x---------- Header -----------x----------->
+
+            <!-----------x---------- Contact -----------x----------->
+
 
       </main>
       <!-----------x---------- Main Site Section -----------x----------->
@@ -86,7 +75,6 @@
                   <div class="about-us">
                         <h2 class="bold">About me</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet tortor accumsan, posuere ligula eu, interdum magna. Proin quis mattis nibh. </p>
-
                   </div>
                   <div class="newsletter">
                         <h2 class="bold">Newsletter</h2>
@@ -125,15 +113,6 @@
       </footer>
 
       <!-----------x---------- Footer -----------x----------->
-
-
-
-
-
-
-
-      
-
 
       <!-- Bootstrap JavaScript -->
       <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
