@@ -63,13 +63,24 @@ hr{
 }
 
 .yt-link{
-      color: red;
+      color: #EF1F1F;
       text-decoration: underline;
 }
 
+.yt-link:hover{
+      color: #C91D1D;
+}
+
 .blog-link{
+      color: #000095;
       text-decoration: underline;
 }
+
+.blog-link:hover{
+      color: #020251;
+}
+
+
 
 /* ---------x-------- Utilities ---------x--------- */
 
@@ -149,6 +160,12 @@ nav#nav-bar a {
             width: 80%;
             max-width: 37rem;
             box-shadow: 0px 6px 52px -25px rgba(0,0,0,0.68);
+
+            transition: 0.3s all ease-in-out;
+      }
+
+      .profile-card:hover{
+            transform: scale(1.015);
       }
 
       .profile-card img {
@@ -374,6 +391,12 @@ nav#nav-bar a {
             font-size: 0.75rem;
             padding: 0.6rem 1.25rem ;
             text-transform: lowercase;
+
+            transition: 0.3s all ease-in-out;
+      }
+
+      main .site-content .post-content .post-title .btn-post:hover {
+            transform: scale(1.05);
       }
 
       /*-- Pagination --*/
@@ -390,6 +413,13 @@ nav#nav-bar a {
             margin: 0 0.3rem;
             color: #000;
             font-size: 0.75rem;
+
+            transition: 0.3s all ease-in-out;
+      }
+
+      main .site-content .pagination a:hover{
+            transform: scale(1.05);
+            text-decoration: none;
       }
 
       main .site-content .pagination .pages{
@@ -557,10 +587,13 @@ nav#nav-bar a {
 
       main .site-content .sidebar .popular-tags .tags .tag{
             background-color: #000;
-            color: #fff;
             padding: 0.4rem 1rem;
             margin: 0.4rem 0;
             font-size: 0.75rem;
+      }
+
+      main .site-content .sidebar .popular-tags .tags .tag a{
+            color: #fff;
       }
 
       /*--x Popular Tags x--*/
@@ -619,9 +652,13 @@ footer ::placeholder{
       font-size: 0.75rem;
 }
 
-footer .container .newsletter .form-element span{
+footer .container .newsletter .form-element button{
+      outline: none;
+      border: none;
       background-color: #212121;
-      padding: 0.63rem 0.5rem;
+      padding: 0.3rem 0.6rem 0.42rem;
+      color: #fff;
+      margin-left: -0.5rem;     
 }
 
 footer .container .newsletter p{
@@ -633,11 +670,24 @@ footer .instagram > div{
       display: flex;
 }
 
-footer .instagram div > img{
+footer .instagram div a img{
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      margin: 0.3rem 0.4rem
+}
+
+footer .instagram div > a{
       display: inline-block;
       width: 25%;
       height: 50%;
-      margin: 0.3rem 0.4rem
+      margin: 0.3rem 0.4rem;
+
+      transition: 0.3s all ease-in-out;
+}
+
+footer .instagram div > a:hover{
+      transform: scale(1.03);
 }
 
 footer .follow p{
@@ -649,6 +699,18 @@ footer .follow > div i{
       margin-top: 1rem;
       margin-right: 0.4rem;
       font-size: 1.5rem;
+
+      transition: 0.3s all ease-in-out;
+}
+
+footer .follow > div a{
+      color: #fff;
+
+      transition: 0.3s all ease-in-out;
+}
+
+footer .follow > div i:hover{
+      transform: scale(1.06);
 }
 
 /* -- Rights --*/
@@ -669,8 +731,16 @@ footer .rights h4{
 }
 
 footer .rights h4 a{
-     color: #fff; 
+      display: inline-block;
+      color: #fff; 
+
+      transition: 0.3s all ease-in-out;
 }
+
+footer .rights h4 a:hover{
+      text-decoration: none;
+      transform: scale(1.02);
+ }
 
 
 /* --x Rights x--*/
@@ -728,7 +798,13 @@ main .contact-wrapper button{
       font-size: 0.75rem;
       padding: 0.5rem 2rem;
       margin: 1.2rem auto 0;
+
+      transition: 0.3s all ease-in-out;
 }
+
+main .contact-wrapper button:hover{
+      transform: scale(1.05);
+}     
 
 
 /* ---------x-------- Form ---------x--------- */
@@ -779,6 +855,12 @@ main .about-header .btn-download{
       font-size: 0.75rem;
       padding: 0.5rem 2rem;
       margin: 1.2rem auto 0; 
+
+      transition: 0.3s all ease-in-out;
+}
+
+main .about-header .btn-download:hover{
+      transform: scale(1.05);
 }
 
 
@@ -805,6 +887,12 @@ main .services .services-card{
       margin-top: 2rem;
       box-shadow: 0px 6px 52px -25px rgba(0,0,0,0.68);
       padding: 1.5rem;
+
+      transition: 0.3s all ease-in-out;
+}
+
+main .services .services-card:hover{
+      transform: scale(1.05);
 }
 
 main .services .services-card .service-icon i{
@@ -888,6 +976,16 @@ main .services .services-card .service-content p{
       footer .follow > div i{
             margin-right: 0.75rem;
             font-size: 2rem;
+      }
+
+      footer .container .newsletter input[type="text"]{
+            width: 15rem;
+       }
+
+      footer .container .newsletter .form-element button{
+            padding: 0.25rem 0.6rem 0.35rem;
+            margin-left: -0.2rem;
+            font-size: 1.3rem;     
       }
 
       /* -- Rights --*/
@@ -1211,7 +1309,6 @@ main .services .services-card .service-content p{
 /* --- INDEX.HTML --------------------------------------------------------------------------------------------------------
 /* -----------------------------------------------------------------------------------------------------------------------
 
-
 /* Viewport is more than 1024px */
 @media only screen and (min-width: 1024px){
       
@@ -1220,6 +1317,45 @@ main .services .services-card .service-content p{
       .profile-card{
             margin-top: 12rem;
       }
+
+      .site-header{
+            height: 76vh;
+      }
+
+      /*-- Card --*/
+
+      .profile-card{
+            padding: 3rem 3rem 2rem;
+            max-width: 26rem;
+      }
+
+      .profile-card img {
+            height: 13rem;
+      }
+
+      .profile-card h1 {
+            margin-top: 2rem;
+            font-size: 2.2rem;
+      }
+
+      .profile-card p {
+            font-size: 1rem;
+      }
+
+      .profile-card .btn-section{
+            margin-top: 3rem;
+      }
+
+      .profile-card .btn-section a:nth-child(1){
+            font-size: 1rem;
+      }
+
+      .profile-card .btn-section a:nth-child(2){
+            padding: 0.6rem 2.60rem;
+            font-size: 1rem;
+      }
+
+      /*--x Card x--*/
 }
 
 
@@ -1244,6 +1380,12 @@ main .services .services-card .service-content p{
 
       main .site-content > .sidebar .category-list .list-items {
             width: 110%;
+            
+            transition: 0.3s all ease-in-out;
+      }
+
+      main .site-content > .sidebar .category-list .list-items:hover {
+            transform: scale(1.05);
       }
 
       /* ------------------ Blog ------------------ */
@@ -1258,10 +1400,26 @@ main .services .services-card .service-content p{
 
       main .site-content .sidebar .newsletter .btn-news{
             width: 80%;
+
+            transition: 0.3s all ease-in-out;
+      }
+
+      main .site-content .sidebar .newsletter .btn-news:hover{
+            transform: scale(1.05);
       }
 
       main .site-content .sidebar .popular-tags .tags{
             width: 90%;
+      }
+
+      main .site-content .sidebar .popular-tags .tags span{
+            transition: 0.3s all ease-in-out;
+      }
+
+
+
+      main .site-content .sidebar .popular-tags .tags span:hover{
+            transform: scale(1.05);
       }
 
 }
