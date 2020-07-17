@@ -1324,6 +1324,15 @@ main .services .services-card .service-content p{
       footer .container .newsletter input[type="text"]{
             width: 15rem;
       }
+
+      footer .container .newsletter .form-element button{
+            outline: none;
+            border: none;
+            background-color: #212121;
+            padding: 0.35rem 0.6rem 0.45rem;
+            color: #fff;
+            margin-left: -0.5rem;     
+      }
 }
 
 /* -----------------------------------------------------------------------------------------------------------------------
@@ -1526,4 +1535,25 @@ main .services .services-card .service-content p{
             height: 8rem;
       }
 
+}
+
+
+/* ----------------------------------------- DESKTOPS ------------------------------------------------*/
+
+/* -----------------------------------------------------------------------------------------------------------------------
+/* --- INDEX.HTML --------------------------------------------------------------------------------------------------------
+/* -----------------------------------------------------------------------------------------------------------------------
+
+/* Viewport is more than 1024px */
+@media only screen and (min-width: 1200px){
+      
+      /*-- Card --*/
+            
+      .profile-card{
+            margin-top: 15rem;
+      }
+
+      .site-header{
+            height: 73vh;
+      }
 }
