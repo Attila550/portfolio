@@ -30,6 +30,8 @@
 /* ------------------ Global ------------------ */
 * {
       font-family: 'axiforma-regular', 'Helvetica', sans-serif;
+      -webkit-appearance: none !important;
+      border-radius: 0;
 }
 
 html, body, p {
@@ -146,7 +148,7 @@ nav#nav-bar a {
       /* ------------------ Header ------------------ */
 
       .site-header{
-            height: 77vh;
+            height: 66vh;
             position: relative;
       }
 
@@ -243,6 +245,14 @@ nav#nav-bar a {
       .socials a:nth-child(2), .socials a:nth-child(3) {
             margin-left: 1rem;
       }
+
+      /*-- iPhone 8 --*/
+      @media only screen and (device-height: 667px){
+            .socials{
+                  margin-top: 1.5rem;
+            }
+      }
+      /*--x iPhone 8 x--*/
 
       /*--x Socials x--*/
 
@@ -644,7 +654,7 @@ footer .container .newsletter input[type="text"]{
      font-size: 0.75rem;
      border: none;
      outline: none;
-     padding: 0.5rem 0.9rem;
+     padding: 0.6rem 0.9rem 0.5rem;
      margin-top: 1rem;
 }
 
@@ -656,7 +666,7 @@ footer .container .newsletter .form-element button{
       outline: none;
       border: none;
       background-color: #212121;
-      padding: 0.3rem 0.6rem 0.42rem;
+      padding: 0.5rem 0.6rem 0.5rem;
       color: #fff;
       margin-left: -0.5rem;     
 }
@@ -777,6 +787,7 @@ main .contact-wrapper input, main .contact-wrapper textarea{
       outline: none;
       border: none;
       display: block;
+      -webkit-box-shadow: 0 0 30px rgba(0,0,0,0.18);
       box-shadow:0 0 30px rgba(0,0,0,0.18);
       width: 100%;
       margin: 1.2rem auto 0;
@@ -979,11 +990,11 @@ main .services .services-card .service-content p{
       }
 
       footer .container .newsletter input[type="text"]{
-            width: 15rem;
-       }
+            width: 8rem;
+      }
 
       footer .container .newsletter .form-element button{
-            padding: 0.25rem 0.6rem 0.35rem;
+            padding: 0.48rem 0.6rem 0.55rem;
             margin-left: -0.2rem;
             font-size: 1.3rem;     
       }
@@ -1013,7 +1024,7 @@ main .services .services-card .service-content p{
       /* ------------------ Header ------------------ */
 
             .site-header{
-                  height: 76vh;
+                  height: 70vh;
             }
       
             /*-- Card --*/
@@ -1304,6 +1315,16 @@ main .services .services-card .service-content p{
 
 /* ----------------------------------------- LAPTOP ------------------------------------------------*/
 
+/* -----------------------------------------------------------------------------------------------------------------------
+/* --- FOOTER  -----------------------------------------------------------------------------------------------------------
+/* -----------------------------------------------------------------------------------------------------------------------
+
+/* Viewport is more than 1024px */
+@media only screen and (min-width: 1024px){
+      footer .container .newsletter input[type="text"]{
+            width: 15rem;
+      }
+}
 
 /* -----------------------------------------------------------------------------------------------------------------------
 /* --- INDEX.HTML --------------------------------------------------------------------------------------------------------
@@ -1315,11 +1336,11 @@ main .services .services-card .service-content p{
       /*-- Card --*/
             
       .profile-card{
-            margin-top: 12rem;
+            margin-top: 5rem;
       }
 
       .site-header{
-            height: 76vh;
+            height: 78vh;
       }
 
       /*-- Card --*/
